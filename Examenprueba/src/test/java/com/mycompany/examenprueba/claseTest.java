@@ -20,28 +20,28 @@ public class claseTest {
     public claseTest() {
     }
 
-    @org.junit.jupiter.api.BeforeAll
-    public static void setUpClass() throws Exception {
-    }
-
-    @org.junit.jupiter.api.AfterAll
-    public static void tearDownClass() throws Exception {
-    }
-
-    @org.junit.jupiter.api.BeforeEach
-    public void setUp() throws Exception {
-    }
-
-    @org.junit.jupiter.api.AfterEach
-    public void tearDown() throws Exception {
-    }
-    
     
 
     @org.junit.jupiter.api.Test
-    public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
+    public void testdividir() {
+        double num1 = 12;
+        double num2 = 4;
+        clase instance = new clase();
+        double resultadoEsperado = 3;
+        double resultado = instance.dividir(12,4);
+        assertEquals(resultadoEsperado, resultado);
         
+        num1 = 3;
+        num2 = 2.0;
+        resultadoEsperado = 1.5;
+        resultado = instance.dividir(3,2);
+        assertEquals(resultadoEsperado, resultado);
+        
+        num1 = 12;
+        num2 = 0;
+        resultadoEsperado = 0;
+        resultado = instance.dividir(12,0);
+        assertEquals(resultadoEsperado, resultado);
     }
     
 }
